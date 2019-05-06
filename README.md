@@ -18,37 +18,47 @@ i tried the code here , but i had some problems that i couldn't get a valid disp
 i used this images for calipration of the camera 
 
 left side :
+
 <img src=https://i.ibb.co/xz5SXNC/Leftside.jpg>
 
 right side : 
+
 <img src=https://i.ibb.co/zb8mvK0/Rightside.jpg>
 
 i tried to calbrate the camera by taking 2 pictures from carfully spicified points and orientations , for testing the code if it works fine 
 
 i used this samble to check the disparity map algorithm after calibrating 
 left side : 
+
 <img src=https://i.ibb.co/k1Xhkdz/Leftobject.jpg>
+
 right side 
+
 <img src=https://i.ibb.co/mhnGBgG/Rightobject.jpg>
 
 after undistortion process; i got this 2 images (befor corping):
 left side :
+
 <img src=https://i.ibb.co/Wpjkr7S/befleftundis.jpg>
 
 right side : 
+
 <img src=https://i.ibb.co/F3BvqVM/befrightundistor.jpg>
 
 the left side looks fine, but the right side don't , after corping; the right side totally vanished, the image is blank
 
 the left side after corping : 
+
 <img src=https://i.ibb.co/cwLwJKk/leftundis.jpg>
 
 the code shows error then, as the left side images dosen't has the same size of the right side image, i relized that rightROI gives [0 0 0 0] , i used the calibration data of the left side , i got this for the right side image  :
 
 before croping : 
+
 <img src=https://i.ibb.co/cCqL3fQ/befrightundistor.jpg>
 
 after croping :
+
 <img src=https://i.ibb.co/rQrRmhJ/rightundistor.jpg>
 
 the disparity map : 
