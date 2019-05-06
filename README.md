@@ -31,4 +31,44 @@ left side :
 right side 
 <img src=https://i.ibb.co/mhnGBgG/Rightobject.jpg>
 
-after undistortion process; i got this 2 images : 
+after undistortion process; i got this 2 images (befor corping):
+left side :
+<img src=https://i.ibb.co/Wpjkr7S/befleftundis.jpg>
+
+right side : 
+<img src=https://i.ibb.co/F3BvqVM/befrightundistor.jpg>
+
+the left side looks fine, but the right side don't , after corping; the right side totally vanished, the image is blank
+
+the left side after corping : 
+<img src=https://i.ibb.co/cwLwJKk/leftundis.jpg>
+
+the code shows error then, as the left side images dosen't has the same size of the right side image, i relized that rightROI gives [0 0 0 0] , i used the calibration data of the left side , i got this for the right side image  :
+
+before croping : 
+<img src=https://i.ibb.co/cCqL3fQ/befrightundistor.jpg>
+
+after croping :
+<img src=https://i.ibb.co/rQrRmhJ/rightundistor.jpg>
+
+the disparity map : 
+
+<img src=https://i.ibb.co/tbrHMZ4/disparity.jpg>
+
+it's meaningless.
+
+possible reasons for this error (in my opinion):
+
+1- i have to use stereocamera, as the spacing between the two lenses is constant, the view then would be the same for any captured images
+
+2- the tested spacing between the two viewes of the camera is too large for the algorithm to have a reasonable results
+
+3- there is a problem in right side calibration .
+
+4- there is a problem in stereoBM configuration 
+
+5- finally - there may be a problem in the disparity map encoding, some data may be lost in conversion between the output format and the final format (float32).
+
+so if anyone could help solving this problem, i would be greatful .
+
+thanks in advance.
